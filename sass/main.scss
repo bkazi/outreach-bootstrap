@@ -1,0 +1,77 @@
+/*see licence.txt*/
+
+$break-mobile: 480px;
+$break-tablets: 768px;
+$break-large: 1024px;
+
+:root {
+  font-size: 20px;
+
+  @media only screen and (min-width: 0px) and (max-width: $break-mobile) {
+    font-size: 14px;
+  }
+  @media only screen and (min-width: $break-mobile) and (max-width: $break-tablets) {
+    font-size: 16px;
+  }
+}
+
+.jumbotron {
+  position: relative;
+  padding: 0 0 0 0;
+  width: 100%;
+  height: 42.857vw;
+  z-index: 0;
+  overflow: hidden;
+  @media only screen and (min-width: 0px) and (max-width: $break-mobile) {
+    height: 115vw;
+  }
+  @media only screen and (min-width: $break-mobile) and (max-width: $break-tablets) {
+    height: 95vw;
+  }
+
+  .back {
+    background-image: url("/img/rendered.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    filter: saturate(110%) contrast(105%) brightness(75%) blur(2px);
+  }
+
+  .container {
+    position: absolute;
+    top: 30%;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    padding-left: 1.7em;
+  }
+
+  h1 {
+    font-family: "Patua One";
+    color: rgb(200, 200, 200);
+    font-size: 3rem;
+    filter: drop-shadow(1px 1px 5px rgb(40, 40, 40));
+  }
+
+  p {
+    font-size: 1.1rem;
+    font-family: 'Open Sans', sans-serif;
+    color: rgb(200, 200, 200);
+  }
+
+  hr {
+    margin-top: 2em;
+    margin-right: auto;
+    margin-left: 0px;
+    color: rgba(200, 200, 200, 0.5);
+    width: 40%;
+  }
+}
+
+#tall {
+  height: 1000px;
+  width: 100%;
+}
