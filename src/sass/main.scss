@@ -5,7 +5,7 @@ $break-tablets: 768px;
 $break-large: 1024px;
 
 :root {
-  font-size: 20px;
+  font-size: 22px;
 
   @media only screen and (min-width: 0px) and (max-width: $break-mobile) {
     font-size: 14px;
@@ -19,14 +19,14 @@ $break-large: 1024px;
   position: relative;
   padding: 0 0 0 0;
   width: 100%;
-  height: 42.857vw;
+  height: 70vh;
   z-index: 0;
   overflow: hidden;
   @media only screen and (min-width: 0px) and (max-width: $break-mobile) {
-    height: 115vw;
+    // height: 115vh;
   }
   @media only screen and (min-width: $break-mobile) and (max-width: $break-tablets) {
-    height: 95vw;
+    // height: 95vh;
   }
 
   .back {
@@ -42,7 +42,7 @@ $break-large: 1024px;
 
   .container {
     position: absolute;
-    top: 30%;
+    top: 5em;
     z-index: 2;
     width: 100%;
     height: 100%;
