@@ -1,3 +1,4 @@
+// see licence.txt
 /*eslint-env node*/
 
 var gulp = require('gulp');
