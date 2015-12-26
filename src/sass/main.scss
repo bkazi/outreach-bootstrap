@@ -1,33 +1,16 @@
 /*see licence.txt*/
 
-$break-mobile: 480px;
-$break-tablets: 768px;
-$break-large: 1024px;
-
 :root {
-  font-size: 22px;
-
-  @media only screen and (min-width: 0px) and (max-width: $break-mobile) {
-    font-size: 14px;
-  }
-  @media only screen and (min-width: $break-mobile) and (max-width: $break-tablets) {
-    font-size: 16px;
-  }
+  font-size: 14px;
 }
 
 .jumbotron {
   position: relative;
   padding: 0 0 0 0;
   width: 100%;
-  height: 70vh;
+  height: 75vh;
   z-index: 0;
   overflow: hidden;
-  @media only screen and (min-width: 0px) and (max-width: $break-mobile) {
-    // height: 115vh;
-  }
-  @media only screen and (min-width: $break-mobile) and (max-width: $break-tablets) {
-    // height: 95vh;
-  }
 
   .back {
     background-image: url("/img/rendered.jpg");
@@ -42,28 +25,29 @@ $break-large: 1024px;
 
   .container {
     position: absolute;
-    top: 5em;
+    top: 3.5em;
     z-index: 2;
     width: 100%;
     height: 100%;
-    padding-left: 1.7em;
+    padding-left: 2em;
+    padding-right: 1em;
   }
 
   h1 {
     font-family: "Patua One";
     color: rgb(200, 200, 200);
-    font-size: 3rem;
+    font-size: 2.5em;
     filter: drop-shadow(1px 1px 5px rgb(40, 40, 40));
   }
 
   p {
-    font-size: 1.1rem;
+    font-size: 1.2em;
     font-family: 'Open Sans', sans-serif;
     color: rgb(200, 200, 200);
   }
 
   hr {
-    margin-top: 2em;
+    margin-top: 1em;
     margin-right: auto;
     margin-left: 0px;
     color: rgba(200, 200, 200, 0.5);
