@@ -4,6 +4,11 @@
   font-size: 14px;
 }
 
+hr {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
 .jumbotron {
   position: relative;
   padding: 0 0 0 0;
@@ -11,6 +16,7 @@
   height: 75vh;
   z-index: 0;
   overflow: hidden;
+  margin-bottom: 0px;
 
   .back {
     background-image: url("/img/rendered.jpg");
@@ -47,7 +53,6 @@
   }
 
   hr {
-    margin-top: 1em;
     margin-right: auto;
     margin-left: 0px;
     color: rgba(200, 200, 200, 0.5);
@@ -55,7 +60,19 @@
   }
 }
 
-#tall {
-  height: 1000px;
-  width: 100%;
+.content {
+  margin-left: 1em;
+  margin-right: 1em;
+  border-bottom: 2px solid rgba(20, 20, 20, 0.15);
+  h1 {
+    font-size: 2em;
+  }
+
+  p {
+    font-size: 1em;
+  }
+}
+
+#intro {
+  margin-bottom: 5px;
 }
