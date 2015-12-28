@@ -6,12 +6,13 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#9c27b0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <title>HTML and CSS</title>
 
-    <!-- Bootstrap -->
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-    <link href='https://fonts.googleapis.com/css?family=Patua+One|Open+Sans' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Patua+One|Open+Sans|Source+Code+Pro:400,600' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="/css/normalize.css">
     <link rel="stylesheet" href="/css/github-syntax.css">
     <link rel="stylesheet" href="/css/main.css">
 
@@ -24,33 +25,100 @@
   </head>
   <body>
 
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.0.0/highlight.min.js"></script>
     <script>hljs.initHighlightingOnLoad();</script>
+    <script src="/js/main.js"></script>
 
-    <div class="jumbotron">
-      <div class="back"></div>
-      <div class="container">
-        <h1>Introduction to HTML and CSS</h1>
-        <p>A guide to creating amazing webpages using Bootstrap 3</p>
+    <div class="" id="main">
+      <header class="navbar">
+        <div class="hamburger" id="navbar-toggle">
+          <span class="icon-bar" id="top"></span>
+          <span class="icon-bar" id="mid"></span>
+          <span class="icon-bar" id="bot"></span>
+        </div>
+      </header>
+
+      <nav class="trigger" id="navbar-trigger">
+        <h3 class="toggler">HTML</h3>
+        <ul class="toggler" style="display:block">
+          <li><a href="#intro">HTML Code</a></li>
+          <li><a href="#struc">Structure of a webpage</a></a></li>
+        </ul>
         <hr>
-      </div>
-    </div>
 
-  <div class="container content" id="intro">
-    <h1>HTML Code</h1>
-    <hr>
-    <p>HTML is made up of HTML elements, which live inside angled brackets.
-      These are usually made up of two tags: an opening and a closing tag (which
-      has an extra forward slash in it). Each HTML element tells the browser
-      something about the text that sits between those opening and closing tags.
-      <br><br>
-      Sometimes the opening tag of the element contains more information, in
-      something called an attribute. These are made up of two parts: a name and
-      a value, separated by an equals sign.</p>
+        <h3 class="toggler">Resources</h3>
+        <ul class="toggler">
+          <li><a href="http://www.w3schools.com/">W3Schools</a></li>
+          <li><a href="http://www.w3schools.com/">W3Schools</a></li>
+        </ul>
+        <hr>
+      </nav>
+
+      <main>
+        <div class="jumbotron">
+          <div class="back"></div>
+          <div class="container">
+            <h1>Introduction to HTML and CSS</h1>
+            <p>A guide to creating amazing webpages using Bootstrap 3</p>
+            <hr>
+          </div>
+        </div>
+
+      <div class="container content" id="intro">
+        <h1>HTML Code</h1>
+        <hr>
+        <p>HTML is made up of HTML elements, which live inside angled brackets.
+          These are usually made up of two tags: an opening and a closing tag (which
+          has an extra forward slash in it). Each HTML element tells the browser
+          something about the text that sits between those opening and closing tags.
+          <br><br>
+          Sometimes the opening tag of the element contains more information, in
+          something called an attribute. These are made up of two parts: a name and
+          a value, separated by an equals sign.</p>
+      </div>
+
+      <div class="container content" id="struc">
+        <h1>Structure of a Website</h1>
+        <hr>
+        <p>
+          <span class="code head">&ltbody&gt</span>
+        <br>
+          Everything inside this element is shown inside the main browser window.
+        <br><br>
+          <span class="code head">&ltbody&gt</span>
+        <br>
+          Before the <span class="code">&ltbody&gt</span> element you will often
+          see a <span class="code">&ltbody&gt</span> element. This contains
+          information about the page (rather than information that is shown
+          within the main part of the browser window.
+        <br><br>
+          <span class="code head">&ltbody&gt</span>
+        <br>
+          The contents of the <span class="code">&ltbody&gt</span> element are
+          either shown in the top of the browser on the tab for that page.
+        </p>
+        <br><br>
+        <pre>
+          <code>
+&lthtml&gt
+  &lthead&gt
+    &lttitle&gtThis is the title of the Page&lt/title&gt
+  &lt/head&gt
+  &ltbody&gt
+    &lth1&gtThis is the Body of the Page&lt/h1&gt
+    &ltp&gt
+      Anything displayed within the body of the web page is displayed within the main browser window.
+    &lt/p&gt
+  &lt/body&gt
+&lt/html&gt
+          </code>
+        </pre>
+      </div>
+    </main>
+
+    <div class="obfuscator" id="obfus"></div>
   </div>
 
   </body>
