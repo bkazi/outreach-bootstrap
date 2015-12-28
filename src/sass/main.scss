@@ -1,12 +1,179 @@
 /*see licence.txt*/
 
 :root {
-  font-size: 14px;
+  font-size: 16px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  line-height: 1.4;
+  font-family: Helvetica, Arial, sans-serif;
+  color: #474745;
+  width: 100%;
+  height: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 500;
+  line-height: 1.1;
+}
+
+p {
+  margin-top: 0;
+}
+
+li {
+  line-height: 24px;
 }
 
 hr {
   margin-top: 0.5em;
   margin-bottom: 0.5em;
+  border: 0;
+  color: #B6B6B6;
+  border-top: 1px solid #B6B6B6;
+}
+
+#main {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: scroll;
+  // webkit-overflow-scrolling: touch;
+}
+
+#main.scroll {
+  overflow: hidden;
+}
+
+.navbar {
+  position: fixed;
+  background: rgb(156, 39, 176);
+  width: 100%;
+  height: 3em;
+  z-index: 10;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),
+              0 3px 1px -2px rgba(0,0,0,.2),
+              0 1px 5px 0 rgba(0,0,0,.12);
+
+  .hamburger {
+    display: block;
+    cursor: pointer;
+    background: transparent;
+    position: relative;
+    float: left;
+    padding-right: 4px;
+    padding-left: 4px;
+    margin-top: 0.9em;
+    margin-left: 0.9em;
+
+    :hover {
+      background: rgba(101, 101, 101, 0.5);
+    }
+
+    .icon-bar {
+      transition: all 0.2s ease-in;
+      background-color: #fff;
+      display: block;
+      width: 22px;
+      height: 2px;
+      margin-top: 4px;
+      margin-bottom: 4px;
+      will-change: transform;
+    }
+  }
+}
+
+.trigger {
+  z-index: 9;
+  transition: all 0.3s cubic-bezier(.4,0,.2,1);
+  position: fixed;
+  top: 3em;
+  left: 0;
+  transform: translateX(-90vw);
+  width: 80vw;
+  height: 100vh;
+  max-height: 100%;
+  background: rgb(255, 255, 255);
+  overflow: visible;
+  overflow-y: auto;
+  will-change: transform;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),
+              0 3px 1px -2px rgba(0,0,0,.2),
+              0 1px 5px 0 rgba(0,0,0,.12);
+
+  .container {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    height: 1000px;
+  }
+}
+
+.toggler {
+  padding: 5px 1em 0px 1em;
+  font-weight: 700;
+  margin-bottom: 0;
+
+  ~ ul {
+    margin-top: 5px;
+    margin-left: 1em;
+    list-style: none;
+    display: none;
+  }
+
+  li {
+    font-weight: 400;
+    padding-bottom: 0.5em;
+    a {
+      color: #9c27b0;
+      text-decoration: none;
+
+      :hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.trigger.show {
+  transform: translateX(0px);
+}
+
+#top.show {
+  opacity: 0;
+}
+
+#mid.show {
+  transform: rotate(45deg) scaleX(0.9);
+}
+
+#bot.show {
+  transform: rotate(-45deg) translateY(-4.5px) translateX(4px) scaleX(0.9);
+}
+
+.obfuscator {
+  transition: background-color 0.2s ease-in;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  visibility: hidden;
+  background-color: transparent;
+  z-index: 8;
+}
+
+.obfuscator.show {
+  visibility: visible;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
 }
 
 .jumbotron {
@@ -34,19 +201,19 @@ hr {
     top: 3.5em;
     z-index: 2;
     width: 100%;
-    height: 100%;
     padding-left: 2em;
     padding-right: 1em;
   }
 
   h1 {
-    font-family: "Patua One";
+    font-family: "Patua One", serif;
     color: rgb(200, 200, 200);
     font-size: 2.5em;
     filter: drop-shadow(1px 1px 5px rgb(40, 40, 40));
   }
 
   p {
+    font-weight: 200;
     font-size: 1.2em;
     font-family: 'Open Sans', sans-serif;
     color: rgb(200, 200, 200);
@@ -71,6 +238,15 @@ hr {
   p {
     font-size: 1em;
   }
+}
+
+.code {
+  font-family: 'Source Code Pro', monospace;
+}
+
+.head {
+  color: rgb(167, 32, 184);
+  font-weight: 600;
 }
 
 #intro {
