@@ -37,12 +37,20 @@ hr {
   border-top: 1px solid #B6B6B6;
 }
 
+pre {
+  margin: 0;
+  .hljs {
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+}
+
 #main {
   position: absolute;
   width: 100%;
   height: 100%;
   overflow: scroll;
-  // webkit-overflow-scrolling: touch;
+  webkit-overflow-scrolling: touch;
 }
 
 #main.scroll {
@@ -211,7 +219,7 @@ main {
   margin-bottom: 0px;
 
   .back {
-    background-image: url("/img/rendered.jpg");
+    background-image: url("/img/rendered-512.jpg");
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
