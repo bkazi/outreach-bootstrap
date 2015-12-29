@@ -13,9 +13,9 @@ var imagemin = require('gulp-imagemin');
 gulp.task('default', ['styles', 'html', 'assets', 'lint', 'scripts'], function() {
     gulp.watch('src/sass/**/*.scss', ['styles']);
     gulp.watch('src/index.html', ['html']);
-    gulp.watch('index.html').on('change', browserSync.reload);
     gulp.watch('src/img/**/*.*', ['assets']);
     gulp.watch('src/js/**/*.js', ['lint', 'scripts']);
+    gulp.watch('index.html').on('change', browserSync.reload);
 
     browserSync.init({
         server: './'
