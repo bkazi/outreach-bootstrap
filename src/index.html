@@ -45,7 +45,7 @@
         <h3 class="toggler">HTML</h3>
         <ul class="toggler" style="display:block">
           <li><a href="#intro">HTML Code</a></li>
-          <li><a href="#struc">Structure of a webpage</a></a></li>
+          <li><a href="#struc">Structure</a></a></li>
         </ul>
         <hr>
 
@@ -88,16 +88,16 @@
         <br>
           Everything inside this element is shown inside the main browser window.
         <br><br>
-          <span class="code head">&ltbody&gt</span>
+          <span class="code head">&lthead&gt</span>
         <br>
           Before the <span class="code">&ltbody&gt</span> element you will often
-          see a <span class="code">&ltbody&gt</span> element. This contains
+          see a <span class="code">&lthead&gt</span> element. This contains
           information about the page (rather than information that is shown
           within the main part of the browser window.
         <br><br>
-          <span class="code head">&ltbody&gt</span>
+          <span class="code head">&lttitle&gt</span>
         <br>
-          The contents of the <span class="code">&ltbody&gt</span> element are
+          The contents of the <span class="code">&lttitle&gt</span> element are
           either shown in the top of the browser on the tab for that page.
         </p>
         <br><br>
@@ -117,6 +117,87 @@
           </code>
         </pre>
       </div>
+
+      <div class="container content" id="lists">
+        <h1>Lists .. Lists .. Lists</h1>
+        <hr>
+        <p>There are 2 kinds of list in HTML, ordered and unordered lists. See
+        what the code below does to the webpage:</p>
+        <pre>
+          <code>
+&lthtml&gt
+  &ltbody&gt
+    &ltul&gt
+      &ltli&gt1kg King Edward potatoes&lt/li&gt
+      &ltli&gt100ml milk&lt/li&gt
+      &ltli&gt50g salted butter&lt/li&gt
+      &ltli&gtFreshly grated nutmeg&lt/li&gt
+      &ltli&gtSalt and pepper to taste&lt/li&gt
+    &lt/ul&gt
+    &ltol&gt
+      &ltli&gtChop potatoes into quarters&lt/li&gt
+      &ltli&gtSimmer in salted water for 15-20 minutes until tender&lt/li&gt
+      &ltli&gtHeat milk, butter and nutmeg&lt/li&gt
+      &ltli&gtDrain potatoes and mash&lt/li&gt
+      &ltli&gtMix in the milk mixture&lt/li&gt
+    &lt/ol&gt
+  &lt/body&gt
+&lt/html&gt
+          </code>
+        </pre>
+        <p>
+          <span class="code head">&ltul&gt</span>
+        <br>
+          The unordered list is created with the <span class="code">&ltul&gt</span> element
+        <br><br>
+          <span class="code head">&ltol&gt</span>
+        <br>
+          The ordered list is created with the <span class="code">&ltol&gt</span> element
+        <br><br>
+          <span class="code head">&ltli&gt</span>
+        <br>
+        Each item in the list is placed between an opening <span class="code">&ltli&gt</span> tag and a closing
+        <span class="code">&lt/li&gt</span> tag. Browsers indent lists by default
+        </p>
+        <br><br>
+      </div>
+
+      <div class="container content" id="links">
+        <h1>Links!</h1>
+        <hr>
+        <pre>
+          <code>
+&lta href="http://www.google.com"&gtGoogle!&lt/a&gt
+          </code>
+        </pre>
+        <p>Links are created using the <span class="code">&lta&gt</span> element. Users can click on anything
+          between the opening <span class="code">&lta&gt</span> tag and closing <span class="code">&lt/a&gt</span> tag. You can specify
+          which page you want to link to using the href attribute.</p>
+      </div>
+
+      <div class="container content" id="links">
+        <h1>Images</h1>
+        <hr>
+        <pre>
+          <code>
+&ltimg src="img/image.jpg" height="300" width="400" alt="image"&gt
+          </code>
+        </pre>
+        <p>
+          <span class="code head">&ltimg&gt</span>
+          <br>
+          To add an image into the page you need to use an
+          <span class="code">&ltimg&gt</span> element. This is an empty element
+          (which means there is no closing tag).
+        </p>
+        <h3>Attributes:</h3>
+        <p>
+          src - This tells the browser where it can find the image file<br>
+          height - This specifies the height of the image in pixels<br>
+          width - This specifies the width of the image in pixels<br>
+        </p>
+      </div>
+
     </main>
 
     <div class="obfuscator" id="obfus"></div>
