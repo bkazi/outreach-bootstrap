@@ -56,7 +56,7 @@ pre {
   width: 100%;
   height: 100%;
   overflow: scroll;
-  webkit-overflow-scrolling: touch;
+  -webkit-overflow-scrolling: touch;
 }
 
 #main.scroll {
@@ -119,13 +119,12 @@ pre {
   left: 0;
   padding-top: 56px;
   transform: translateX(-85vw);
-  width: 75vw;
-  min-height: 100%;
-  max-height: 100%;
+  width: 280px;
+  height: 100%;
   background: rgb(255, 255, 255);
   overflow: visible;
   overflow-y: auto;
-  will-change: transform;
+  font-size: 16px;
   box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),
               0 3px 1px -2px rgba(0,0,0,.2),
               0 1px 5px 0 rgba(0,0,0,.12);
@@ -236,7 +235,10 @@ main {
 
   .container {
     position: absolute;
-    top: 3.5em;
+    top: 11vh;
+    @media only screen and (min-aspect-ratio: 9/10) {
+      top: 0vh;
+    }
     z-index: 2;
     width: 100%;
     padding-left: 1.5em;
