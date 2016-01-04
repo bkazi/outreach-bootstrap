@@ -31,17 +31,16 @@ gulp.task('default', function() {
     });
 });
 
-gulp.task('serve', function() {
+gulp.task('dist', function() {
     runSequence('assets-dist',
                 'check-for-favicon-update',
                 'styles-dist',
                 'html-dist',
-                'scripts-dist',
-                'git-push');
+                'scripts-dist');
 });
 
-gulp.task('git-push', function() {
-    gulp.src('./')
+gulp.task('deploy', function() {
+    return gulp.src('./**/*')
         .pipe(ghPages());
 });
 
