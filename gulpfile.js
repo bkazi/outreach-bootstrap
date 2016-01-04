@@ -53,6 +53,12 @@ gulp.task('build', function() {
         }, {
             height: 768,
             width: 1366
+        }, {
+            height: 800,
+            width: 1280
+        }, {
+            height: 900,
+            width: 1440
         }]
     });
 });
