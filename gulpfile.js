@@ -35,7 +35,6 @@ gulp.task('default', function() {
 
 gulp.task('build', function() {
     runSequence('clean', 'dist');
-    runSequence('critical');
 });
 
 gulp.task('critical', function() {
@@ -68,7 +67,7 @@ gulp.task('critical', function() {
 });
 
 gulp.task('clean', function() {
-    del(['index.html', 'js/**', 'img/**', 'css/**']);
+    del(['./index.html', 'js/**', 'img/**', 'css/**']);
 });
 
 gulp.task('dist', function() {
