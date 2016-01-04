@@ -1,35 +1,210 @@
 <!-- see licence.txt -->
-<!DOCTYPE html><html lang="en">  <head>    <meta charset="utf-8">    <meta http-equiv="X-UA-Compatible" content="IE=edge">    <meta name="viewport" content="width=device-width,initial-scale=1">    <meta name="apple-mobile-web-app-capable" content="yes">    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">    <title>HTML and CSS</title>    <style type="text/css">
-#main,.navbar,body{width:100%}body,pre{margin:0}#main,body{height:100%}.navbar,.trigger{box-shadow:0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12)}@font-face{font-family:'Open Sans';font-style:normal;font-weight:400;src:local('Open Sans'),local('OpenSans'),url(https://fonts.gstatic.com/s/opensans/v13/cJZKeOuBrn4kERxqtaUH3aCWcynf_cDxXwCLxiixG1c.ttf) format('truetype')}@font-face{font-family:'Patua One';font-style:normal;font-weight:400;src:local('Patua One'),local('PatuaOne-Regular'),url(https://fonts.gstatic.com/s/patuaone/v6/yAXhog6uK3bd3OwBILv_SKCWcynf_cDxXwCLxiixG1c.ttf) format('truetype')}@font-face{font-family:'Open Sans';font-style:normal;font-weight:400;src:local('Open Sans'),local('OpenSans'),url(https://fonts.gstatic.com/s/opensans/v13/cJZKeOuBrn4kERxqtaUH3aCWcynf_cDxXwCLxiixG1c.ttf) format('truetype')}@font-face{font-family:'Patua One';font-style:normal;font-weight:400;src:local('Patua One'),local('PatuaOne-Regular'),url(https://fonts.gstatic.com/s/patuaone/v6/yAXhog6uK3bd3OwBILv_SKCWcynf_cDxXwCLxiixG1c.ttf) format('truetype')}@font-face{font-family:'Source Code Pro';font-style:normal;font-weight:400;src:local('Source Code Pro'),local('SourceCodePro-Regular'),url(https://fonts.gstatic.com/s/sourcecodepro/v6/mrl8jkM18OlOQN8JLgasD9zbP97U9sKh0jjxbPbfOKg.ttf) format('truetype')}@font-face{font-family:'Source Code Pro';font-style:normal;font-weight:600;src:local('Source Code Pro Semibold'),local('SourceCodePro-Semibold'),url(https://fonts.gstatic.com/s/sourcecodepro/v6/leqv3v-yTsJNC7nFznSMqdNE-IuDiR70wI4zXaKqWCM.ttf) format('truetype')}@font-face{font-family:'Open Sans';font-style:normal;font-weight:400;src:local('Open Sans'),local('OpenSans'),url(https://fonts.gstatic.com/s/opensans/v13/cJZKeOuBrn4kERxqtaUH3aCWcynf_cDxXwCLxiixG1c.ttf) format('truetype')}@font-face{font-family:'Patua One';font-style:normal;font-weight:400;src:local('Patua One'),local('PatuaOne-Regular'),url(https://fonts.gstatic.com/s/patuaone/v6/yAXhog6uK3bd3OwBILv_SKCWcynf_cDxXwCLxiixG1c.ttf) format('truetype')}@font-face{font-family:'Source Code Pro';font-style:normal;font-weight:400;src:local('Source Code Pro'),local('SourceCodePro-Regular'),url(https://fonts.gstatic.com/s/sourcecodepro/v6/mrl8jkM18OlOQN8JLgasD9zbP97U9sKh0jjxbPbfOKg.ttf) format('truetype')}@font-face{font-family:'Source Code Pro';font-style:normal;font-weight:600;src:local('Source Code Pro Semibold'),local('SourceCodePro-Semibold'),url(https://fonts.gstatic.com/s/sourcecodepro/v6/leqv3v-yTsJNC7nFznSMqdNE-IuDiR70wI4zXaKqWCM.ttf) format('truetype')}pre{overflow:auto}code,pre{font-family:monospace,monospace;font-size:1em}@font-face{font-family:'Open Sans';font-style:normal;font-weight:400;src:local('Open Sans'),local('OpenSans'),url(https://fonts.gstatic.com/s/opensans/v13/cJZKeOuBrn4kERxqtaUH3aCWcynf_cDxXwCLxiixG1c.ttf) format('truetype')}@font-face{font-family:'Patua One';font-style:normal;font-weight:400;src:local('Patua One'),local('PatuaOne-Regular'),url(https://fonts.gstatic.com/s/patuaone/v6/yAXhog6uK3bd3OwBILv_SKCWcynf_cDxXwCLxiixG1c.ttf) format('truetype')}@font-face{font-family:'Source Code Pro';font-style:normal;font-weight:400;src:local('Source Code Pro'),local('SourceCodePro-Regular'),url(https://fonts.gstatic.com/s/sourcecodepro/v6/mrl8jkM18OlOQN8JLgasD9zbP97U9sKh0jjxbPbfOKg.ttf) format('truetype')}@font-face{font-family:'Source Code Pro';font-style:normal;font-weight:600;src:local('Source Code Pro Semibold'),local('SourceCodePro-Semibold'),url(https://fonts.gstatic.com/s/sourcecodepro/v6/leqv3v-yTsJNC7nFznSMqdNE-IuDiR70wI4zXaKqWCM.ttf) format('truetype')}body{line-height:1.4;font-family:Helvetica,Arial,sans-serif;color:#474745}header,main,nav{display:block}a{background-color:transparent}h1{font-size:2em;margin:.67em 0}hr{-moz-box-sizing:content-box;box-sizing:content-box;height:0;margin-top:.5em;margin-bottom:.5em;border:0;color:#B6B6B6;border-top:1px solid #B6B6B6}:root{font-size:16px}@media screen and (-webkit-min-device-pixel-ratio:3),screen and (min-resolution:3dppx){:root{font-size:18px}}@media screen and (min-width:600px){:root{font-size:20px}}*{box-sizing:border-box}h1,h3{font-weight:500;line-height:1.1}p{margin-top:0}li{line-height:24px}#main{position:absolute;overflow:scroll;-webkit-overflow-scrolling:touch}.navbar{position:fixed;background:#9c27b0;height:56px;z-index:10}.navbar #head,.navbar .hamburger{display:inline-block;height:100%}.navbar #head{font-family:Helvetica,sans-serif;font-weight:400;font-size:1.2em;line-height:64px;color:#FFF;margin-left:.2em}.navbar .hamburger{cursor:pointer;background:0 0;position:relative;float:left;min-width:48px;padding:22px .9em 10px}.navbar .hamburger .icon-bar{transition:all .2s ease-in;background-color:#fff;display:block;width:1.2em;height:.125em;margin-top:3px;margin-bottom:3px;will-change:transform}.trigger{z-index:9;transition:all .3s cubic-bezier(.4,0,.2,1);position:fixed;top:0;left:0;padding-top:56px;-webkit-transform:translateX(-290px);transform:translateX(-290px);width:280px;height:100%;background:#fff;overflow:visible;overflow-y:auto;font-size:16px}.trigger hr{border-color:rgba(60,60,60,.2);margin-bottom:0;margin-top:1em}.toggler{padding:5px 1em 0;font-weight:700;margin-bottom:0}.toggler~ul{margin-top:5px;margin-left:1em;list-style:none;display:none}.toggler li{font-weight:400;padding-bottom:.5em}.toggler li a{color:#9c27b0;text-decoration:none}main{position:absolute;top:56px;width:100%;overflow:auto}.obfuscator{transition:background-color .2s ease-in;width:100%;height:100%;position:fixed;top:0;left:0;visibility:hidden;background-color:transparent;z-index:8}.container{padding-right:1em;padding-left:1em}.jumbotron{position:relative;padding:0;width:100%;height:75vh;z-index:0;overflow:hidden;margin-bottom:0}.jumbotron .back{background-image:url(/img/rendered-512.jpg);background-size:cover;background-position:center;background-attachment:fixed;width:100%;height:100%;z-index:1;-webkit-filter:saturate(110%) contrast(105%) brightness(75%) blur(2px);filter:saturate(110%) contrast(105%) brightness(75%) blur(2px)}.jumbotron .container{position:absolute;top:11vh;z-index:2;width:100%;padding-left:1.5em;padding-right:1em}.jumbotron h1{font-family:"Patua One",serif;color:#c8c8c8;font-size:2.5em;-webkit-filter:drop-shadow(1px 1px 5px #282828);filter:drop-shadow(1px 1px 5px #282828)}.jumbotron p{font-weight:200;font-size:1.2em;font-family:'Open Sans',sans-serif;color:#c8c8c8}.jumbotron hr{margin-right:auto;margin-left:0;color:rgba(200,200,200,.5);width:40%}.content{margin-left:1em;margin-right:1em;border-bottom:2px solid rgba(20,20,20,.15)}.content h1{font-size:2em}.content p{font-size:1em}.code{font-family:'Source Code Pro',monospace}.head{color:#a720b8;font-weight:600}#intro{margin-bottom:5px}
-</style>
-<script id="loadcss">
-(function(u,s){!function(e){"use strict";var n=function(n,t,o){var l,r=e.document,i=r.createElement("link");if(t)l=t;else{var a=(r.body||r.getElementsByTagName("head")[0]).childNodes;l=a[a.length-1]}var d=r.styleSheets;i.rel="stylesheet",i.href=n,i.media="only x",l.parentNode.insertBefore(i,t?l:l.nextSibling);var f=function(e){for(var n=i.href,t=d.length;t--;)if(d[t].href===n)return e();setTimeout(function(){f(e)})};return i.onloadcssdefined=f,f(function(){i.media=o||"all"}),i};"undefined"!=typeof module?module.exports=n:e.loadCSS=n}("undefined"!=typeof global?global:this);for(var i in u){loadCSS(u[i],s);}}(['https://fonts.googleapis.com/css?family=Patua+One|Open+Sans|Source+Code+Pro:400,600','./css/normalize.css','./css/github-syntax.css','./css/main.css'],document.getElementById("loadcss")));
-</script>
-<noscript>
-<link href="https://fonts.googleapis.com/css?family=Patua+One|Open+Sans|Source+Code+Pro:400,600" rel="stylesheet" type="text/css">
-<link rel="stylesheet" href="./css/normalize.css">
-<link rel="stylesheet" href="./css/github-syntax.css">
-<link rel="stylesheet" href="./css/main.css">
-</noscript>                <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->    <!--[if lt IE 9]>      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>    <![endif]-->  <link rel="apple-touch-icon" sizes="57x57" href="favicons/apple-touch-icon-57x57.png">
-<link rel="apple-touch-icon" sizes="60x60" href="favicons/apple-touch-icon-60x60.png">
-<link rel="apple-touch-icon" sizes="72x72" href="favicons/apple-touch-icon-72x72.png">
-<link rel="apple-touch-icon" sizes="76x76" href="favicons/apple-touch-icon-76x76.png">
-<link rel="apple-touch-icon" sizes="114x114" href="favicons/apple-touch-icon-114x114.png">
-<link rel="apple-touch-icon" sizes="120x120" href="favicons/apple-touch-icon-120x120.png">
-<link rel="apple-touch-icon" sizes="144x144" href="favicons/apple-touch-icon-144x144.png">
-<link rel="apple-touch-icon" sizes="152x152" href="favicons/apple-touch-icon-152x152.png">
-<link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon-180x180.png">
-<link rel="icon" type="image/png" href="favicons/favicon-32x32.png" sizes="32x32">
-<link rel="icon" type="image/png" href="favicons/favicon-194x194.png" sizes="194x194">
-<link rel="icon" type="image/png" href="favicons/favicon-96x96.png" sizes="96x96">
-<link rel="icon" type="image/png" href="favicons/android-chrome-192x192.png" sizes="192x192">
-<link rel="icon" type="image/png" href="favicons/favicon-16x16.png" sizes="16x16">
-<link rel="manifest" href="favicons/manifest.json">
-<link rel="mask-icon" href="favicons/safari-pinned-tab.svg" color="#9c27b0">
-<link rel="shortcut icon" href="favicons/favicon.ico">
-<meta name="apple-mobile-web-app-title" content="HTML and CSS">
-<meta name="application-name" content="HTML and CSS">
-<meta name="msapplication-TileColor" content="#603cba">
-<meta name="msapplication-TileImage" content="favicons/mstile-144x144.png">
-<meta name="msapplication-config" content="favicons/browserconfig.xml">
-<meta name="theme-color" content="#9c27b0"></head>  <body>    <script src="./js/main.js"></script>    <script>hljs.initHighlightingOnLoad();</script>    <header class="navbar">      <div class="hamburger" id="navbar-toggle">        <span class="icon-bar" id="top"></span>        <span class="icon-bar" id="mid"></span>        <span class="icon-bar" id="bot"></span>      </div>      <span id="head">HTML and CSS</span>    </header>    <nav class="trigger" id="navbar-trigger">      <h3 class="toggler">HTML</h3>      <ul class="toggler" style="display:block">        <li><a href="#intro">HTML Code</a></li>        <li><a href="#struc">Structure</a></li>        <li><a href="#lists">Lists</a></li>        <li><a href="#links">Links</a></li>        <li><a href="#images">Images</a></li>      </ul>      <hr>      <h3 class="toggler">Resources</h3>      <ul class="toggler">        <li><a href="#">Guide webpage</a></li>        <li><a href="http://www.w3schools.com/">W3Schools</a></li>        <li><a href="http://www.getbootstrap.com/components/">Bootstrap Components</a></li>        <li><a href="http://www.getbootstrap.com/css/">Bootstrap CSS Reference</a></li>        <li><a href="https://developer.mozilla.org/en/docs/Web/HTML/Element">HTML Reference</a></li>        <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/">CSS Reference</a></li>      </ul>      <hr>    </nav>    <div id="main">      <main>        <div class="jumbotron">          <div class="back"></div>          <div class="container">            <h1>Introduction to HTML and CSS</h1>            <p>An introductory guide to creating amazing webpages using Bootstrap 3</p>            <hr>          </div>        </div>      <div class="container content" id="intro">        <h1>HTML</h1>        <hr>        <p>HTML is made up of HTML elements, which live inside angled brackets.          These are usually made up of two tags: an opening and a closing tag (which          has an extra forward slash in it). Each HTML element tells the browser          something about the text that sits between those opening and closing tags.          <br><br>          Sometimes the opening tag of the element contains more information, in          something called an attribute. These are made up of two parts: a name and          a value, separated by an equals sign.</p>      </div>      <div class="container content" id="struc">        <h1>Structure of a Website</h1>        <hr>        <p>          <span class="code head">&ltbody&gt</span>        <br>          Everything inside this element is shown inside the main browser window.        <br><br>          <span class="code head">&lthead&gt</span>        <br>          Before the <span class="code">&ltbody&gt</span> element you will often          see a <span class="code">&lthead&gt</span> element. This contains          information about the page (rather than information that is shown          within the main part of the browser window.        <br><br>          <span class="code head">&lttitle&gt</span>        <br>          The contents of the <span class="code">&lttitle&gt</span> element are          either shown in the top of the browser on the tab for that page.        </p>        <br><br>        <pre>          <code>&lthtml&gt  &lthead&gt    &lttitle&gtThis is the title of the Page&lt/title&gt  &lt/head&gt  &ltbody&gt    &lth1&gtThis is the Body of the Page&lt/h1&gt    &ltp&gt      Anything displayed within the body of the web page is displayed within the main browser window.    &lt/p&gt  &lt/body&gt&lt/html&gt          </code>        </pre>      </div>      <div class="container content" id="lists">        <h1>Lists .. Lists .. Lists</h1>        <hr>        <p>There are 2 kinds of list in HTML, ordered and unordered lists. See        what the code below does to the webpage:</p>        <pre>          <code>&lthtml&gt  &ltbody&gt    &ltul&gt      &ltli&gt1kg King Edward potatoes&lt/li&gt      &ltli&gt100ml milk&lt/li&gt      &ltli&gt50g salted butter&lt/li&gt      &ltli&gtFreshly grated nutmeg&lt/li&gt      &ltli&gtSalt and pepper to taste&lt/li&gt    &lt/ul&gt    &ltol&gt      &ltli&gtChop potatoes into quarters&lt/li&gt      &ltli&gtSimmer in salted water for 15-20 minutes until tender&lt/li&gt      &ltli&gtHeat milk, butter and nutmeg&lt/li&gt      &ltli&gtDrain potatoes and mash&lt/li&gt      &ltli&gtMix in the milk mixture&lt/li&gt    &lt/ol&gt  &lt/body&gt&lt/html&gt          </code>        </pre>        <p>          <span class="code head">&ltul&gt</span>        <br>          The unordered list is created with the <span class="code">&ltul&gt</span> element        <br><br>          <span class="code head">&ltol&gt</span>        <br>          The ordered list is created with the <span class="code">&ltol&gt</span> element        <br><br>          <span class="code head">&ltli&gt</span>        <br>        Each item in the list is placed between an opening <span class="code">&ltli&gt</span> tag and a closing        <span class="code">&lt/li&gt</span> tag. Browsers indent lists by default        </p>        <br><br>      </div>      <div class="container content" id="links">        <h1>Links!</h1>        <hr>        <pre>          <code>&lta href="http://www.google.com"&gtGoogle!&lt/a&gt          </code>        </pre>        <p>Links are created using the <span class="code">&lta&gt</span> element. Users can click on anything          between the opening <span class="code">&lta&gt</span> tag and closing <span class="code">&lt/a&gt</span> tag. You can specify          which page you want to link to using the href attribute.</p>      </div>      <div class="container content" id="images">        <h1>Images</h1>        <hr>        <pre>          <code>&ltimg src="img/image.jpg" height="300" width="400" alt="image"&gt          </code>        </pre>        <p>          <span class="code head">&ltimg&gt</span>          <br>          To add an image into the page you need to use an          <span class="code">&ltimg&gt</span> element. This is an empty element          (which means there is no closing tag).        </p>        <h3>Attributes:</h3>        <p>          src - This tells the browser where it can find the image file<br>          height - This specifies the height of the image in pixels<br>          width - This specifies the width of the image in pixels<br>        </p>      </div>    </main>    <div class="obfuscator" id="obfus"></div>  </div>  </body></html>
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#9c27b0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>HTML and CSS</title>
+
+    <link href='https://fonts.googleapis.com/css?family=Patua+One|Open+Sans|Source+Code+Pro:400,600' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/github-syntax.css">
+    <link rel="stylesheet" href="./css/main.css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+
+    <script async src="./js/main.js"></script>
+
+    <header class="navbar">
+      <div class="hamburger" id="navbar-toggle">
+        <span class="icon-bar" id="top"></span>
+        <span class="icon-bar" id="mid"></span>
+        <span class="icon-bar" id="bot"></span>
+      </div>
+      <span id="head">HTML and CSS</span>
+    </header>
+
+    <nav class="trigger" id="navbar-trigger">
+      <h3 class="toggler">HTML</h3>
+      <ul class="toggler" style="display:block">
+        <li><a href="#intro">HTML Code</a></li>
+        <li><a href="#struc">Structure</a></a></li>
+        <li><a href="#lists">Lists</a></a></li>
+        <li><a href="#links">Links</a></a></li>
+        <li><a href="#images">Images</a></a></li>
+      </ul>
+      <hr>
+
+      <h3 class="toggler">Resources</h3>
+      <ul class="toggler">
+        <li><a href="#">Guide webpage</a></li>
+        <li><a href="http://www.w3schools.com/">W3Schools</a></li>
+        <li><a href="http://www.getbootstrap.com/components/">Bootstrap Components</a></li>
+        <li><a href="http://www.getbootstrap.com/css/">Bootstrap CSS Reference</a></li>
+        <li><a href="https://developer.mozilla.org/en/docs/Web/HTML/Element">HTML Reference</a></li>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/">CSS Reference</a></li>
+      </ul>
+      <hr>
+    </nav>
+
+    <div id="main">
+      <main>
+        <div class="jumbotron">
+          <div class="back"></div>
+          <div class="container">
+            <h1>Introduction to HTML and CSS</h1>
+            <p>An introductory guide to creating amazing webpages using Bootstrap 3</p>
+            <hr>
+          </div>
+        </div>
+
+      <div class="container content" id="intro">
+        <h1>HTML</h1>
+        <hr>
+        <p>HTML is made up of HTML elements, which live inside angled brackets.
+          These are usually made up of two tags: an opening and a closing tag (which
+          has an extra forward slash in it). Each HTML element tells the browser
+          something about the text that sits between those opening and closing tags.
+          <br><br>
+          Sometimes the opening tag of the element contains more information, in
+          something called an attribute. These are made up of two parts: a name and
+          a value, separated by an equals sign.</p>
+      </div>
+
+      <div class="container content" id="struc">
+        <h1>Structure of a Website</h1>
+        <hr>
+        <p>
+          <span class="code head">&ltbody&gt</span>
+        <br>
+          Everything inside this element is shown inside the main browser window.
+        <br><br>
+          <span class="code head">&lthead&gt</span>
+        <br>
+          Before the <span class="code">&ltbody&gt</span> element you will often
+          see a <span class="code">&lthead&gt</span> element. This contains
+          information about the page (rather than information that is shown
+          within the main part of the browser window.
+        <br><br>
+          <span class="code head">&lttitle&gt</span>
+        <br>
+          The contents of the <span class="code">&lttitle&gt</span> element are
+          either shown in the top of the browser on the tab for that page.
+        </p>
+        <br><br>
+        <pre>
+          <code>
+&lthtml&gt
+  &lthead&gt
+    &lttitle&gtThis is the title of the Page&lt/title&gt
+  &lt/head&gt
+  &ltbody&gt
+    &lth1&gtThis is the Body of the Page&lt/h1&gt
+    &ltp&gt
+      Anything displayed within the body of the web page is displayed within the main browser window.
+    &lt/p&gt
+  &lt/body&gt
+&lt/html&gt
+          </code>
+        </pre>
+      </div>
+
+      <div class="container content" id="lists">
+        <h1>Lists .. Lists .. Lists</h1>
+        <hr>
+        <p>There are 2 kinds of list in HTML, ordered and unordered lists. See
+        what the code below does to the webpage:</p>
+        <pre>
+          <code>
+&lthtml&gt
+  &ltbody&gt
+    &ltul&gt
+      &ltli&gt1kg King Edward potatoes&lt/li&gt
+      &ltli&gt100ml milk&lt/li&gt
+      &ltli&gt50g salted butter&lt/li&gt
+      &ltli&gtFreshly grated nutmeg&lt/li&gt
+      &ltli&gtSalt and pepper to taste&lt/li&gt
+    &lt/ul&gt
+    &ltol&gt
+      &ltli&gtChop potatoes into quarters&lt/li&gt
+      &ltli&gtSimmer in salted water for 15-20 minutes until tender&lt/li&gt
+      &ltli&gtHeat milk, butter and nutmeg&lt/li&gt
+      &ltli&gtDrain potatoes and mash&lt/li&gt
+      &ltli&gtMix in the milk mixture&lt/li&gt
+    &lt/ol&gt
+  &lt/body&gt
+&lt/html&gt
+          </code>
+        </pre>
+        <p>
+          <span class="code head">&ltul&gt</span>
+        <br>
+          The unordered list is created with the <span class="code">&ltul&gt</span> element
+        <br><br>
+          <span class="code head">&ltol&gt</span>
+        <br>
+          The ordered list is created with the <span class="code">&ltol&gt</span> element
+        <br><br>
+          <span class="code head">&ltli&gt</span>
+        <br>
+        Each item in the list is placed between an opening <span class="code">&ltli&gt</span> tag and a closing
+        <span class="code">&lt/li&gt</span> tag. Browsers indent lists by default
+        </p>
+        <br><br>
+      </div>
+
+      <div class="container content" id="links">
+        <h1>Links!</h1>
+        <hr>
+        <pre>
+          <code>
+&lta href="http://www.google.com"&gtGoogle!&lt/a&gt
+          </code>
+        </pre>
+        <p>Links are created using the <span class="code">&lta&gt</span> element. Users can click on anything
+          between the opening <span class="code">&lta&gt</span> tag and closing <span class="code">&lt/a&gt</span> tag. You can specify
+          which page you want to link to using the href attribute.</p>
+      </div>
+
+      <div class="container content" id="images">
+        <h1>Images</h1>
+        <hr>
+        <pre>
+          <code>
+&ltimg src="img/image.jpg" height="300" width="400" alt="image"&gt
+          </code>
+        </pre>
+        <p>
+          <span class="code head">&ltimg&gt</span>
+          <br>
+          To add an image into the page you need to use an
+          <span class="code">&ltimg&gt</span> element. This is an empty element
+          (which means there is no closing tag).
+        </p>
+        <h3>Attributes:</h3>
+        <p>
+          src - This tells the browser where it can find the image file<br>
+          height - This specifies the height of the image in pixels<br>
+          width - This specifies the width of the image in pixels<br>
+        </p>
+      </div>
+
+    </main>
+
+    <div class="obfuscator" id="obfus"></div>
+  </div>
+
+  </body>
+</html>
