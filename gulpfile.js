@@ -10,10 +10,11 @@ var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
 var imagemin = require('gulp-imagemin');
 var realFavicon = require ('gulp-real-favicon');
+var fs = require('fs');
 var ghPages = require('gulp-gh-pages');
 var htmlmin = require('gulp-htmlmin');
 var runSequence = require('run-sequence');
-var fs = require('fs');
+var critical = require('critical');
 
 // File where the favicon markups are stored
 var FAVICON_DATA_FILE = 'faviconData.json';
@@ -28,6 +29,29 @@ gulp.task('default', function() {
 
     browserSync.init({
         server: './'
+    });
+});
+
+gulp.task('build', ['dist'], function() {
+    critical.generate({
+        inline: true,
+        base: './',
+        src: 'index.html',
+        dest: 'index.html',
+        minify: true,
+        dimensions: [{
+            height: 200,
+            width: 500
+        }, {
+            height: 760,
+            width: 400
+        }, {
+            height: 1024,
+            width: 768
+        }, {
+            height: 768,
+            width: 1366
+        }]
     });
 });
 
