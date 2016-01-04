@@ -35,7 +35,7 @@ gulp.task('default', function() {
 gulp.task('build', ['dist'], function() {
     critical.generate({
         inline: true,
-        base: './',
+        base: '../',
         src: 'index.html',
         dest: 'index.html',
         minify: true,
