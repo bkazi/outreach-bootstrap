@@ -35,6 +35,10 @@ gulp.task('default', function() {
 
 gulp.task('build', function() {
     runSequence('clean', 'dist');
+    runSequence('critical');
+});
+
+gulp.task('critical', function() {
     critical.generate({
         inline: true,
         base: './',
