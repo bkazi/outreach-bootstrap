@@ -134,6 +134,8 @@ gulp.task('assets-dist', function() {
           progressive: true
       }))
       .pipe(gulp.dest('./img'));
+    gulp.src('src/css/**/*.css')
+          .pipe(gulp.dest('./css'));
 });
 
 gulp.task('assets', function() {
