@@ -15,6 +15,7 @@ var ghPages = require('gulp-gh-pages');
 var htmlmin = require('gulp-htmlmin');
 var runSequence = require('run-sequence');
 var critical = require('critical');
+var del = require('del');
 
 // File where the favicon markups are stored
 var FAVICON_DATA_FILE = 'faviconData.json';
@@ -32,10 +33,11 @@ gulp.task('default', function() {
     });
 });
 
-gulp.task('build', ['dist'], function() {
+gulp.task('build', function() {
+    runSequence('clean', 'dist');
     critical.generate({
         inline: true,
-        base: '../',
+        base: './',
         src: 'index.html',
         dest: 'index.html',
         minify: true,
@@ -53,6 +55,10 @@ gulp.task('build', ['dist'], function() {
             width: 1366
         }]
     });
+});
+
+gulp.task('clean', function() {
+    del(['index.html', 'js/**', 'img/**', 'css/**']);
 });
 
 gulp.task('dist', function() {
@@ -132,7 +138,9 @@ gulp.task('assets-dist', function() {
 
 gulp.task('assets', function() {
     gulp.src('src/img/**/*.*')
-      .pipe(gulp.dest('./img'));
+        .pipe(gulp.dest('./img'));
+    gulp.src('src/css/**/*.css')
+        .pipe(gulp.dest('./css'));
 });
 
 gulp.task('generate-favicon', function(done) {
