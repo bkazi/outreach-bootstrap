@@ -43,6 +43,7 @@ gulp.task('critical', function() {
         base: './',
         src: 'index.html',
         dest: 'index.html',
+        pathPrefix: 'outreach-bootstrap/',
         minify: true,
         dimensions: [{
             height: 200,
