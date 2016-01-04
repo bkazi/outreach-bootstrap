@@ -10,12 +10,16 @@ var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
 var imagemin = require('gulp-imagemin');
 var realFavicon = require ('gulp-real-favicon');
+var ghPages = require('gulp-gh-pages');
+var htmlmin = require('gulp-htmlmin');
+var runSequence = require('run-sequence');
 var fs = require('fs');
 
 // File where the favicon markups are stored
 var FAVICON_DATA_FILE = 'faviconData.json';
 
-gulp.task('default', ['styles', 'assets', 'html', 'lint', 'scripts'], function() {
+gulp.task('default', function() {
+    runSequence('styles', 'assets', 'html', 'lint', 'scripts');
     gulp.watch('src/sass/**/*.scss', ['styles']);
     gulp.watch('src/index.html', ['html']);
     gulp.watch('src/img/**/*.*', ['assets']);
@@ -27,15 +31,21 @@ gulp.task('default', ['styles', 'assets', 'html', 'lint', 'scripts'], function()
     });
 });
 
-gulp.task('serve',
-  [ 'styles',
-    'html',
-    'assets',
-    'lint',
-    'scripts-dist'
-  ]);
+gulp.task('serve', function() {
+    runSequence('assets-dist',
+                'check-for-favicon-update',
+                'styles-dist',
+                'html-dist',
+                'scripts-dist',
+                'git-push');
+});
 
-gulp.task('styles', function() {
+gulp.task('git-push', function() {
+    gulp.src('./')
+        .pipe(ghPages());
+});
+
+gulp.task('styles-dist', function() {
     gulp.src('src/sass/**/*.scss')
       .pipe(sass({
           outputStyle: 'compressed'
@@ -43,13 +53,28 @@ gulp.task('styles', function() {
       .pipe(autoprefixer({
           browsers: ['last 2 versions']
       }))
+      .pipe(gulp.dest('./css'));
+});
+
+gulp.task('styles', function() {
+    gulp.src('src/sass/**/*.scss')
+      .pipe(sass().on('error', sass.logError))
+      .pipe(autoprefixer({
+          browsers: ['last 2 versions']
+      }))
       .pipe(gulp.dest('./css'))
       .pipe(browserSync.stream());
 });
 
-gulp.task('html', function() {
+gulp.task('html-dist', function() {
     gulp.src('src/index.html')
         .pipe(realFavicon.injectFaviconMarkups(JSON.parse(fs.readFileSync(FAVICON_DATA_FILE)).favicon.html_code))
+        .pipe(htmlmin({collapseWhiteSpace: true}))
+        .pipe(gulp.dest('./'));
+});
+
+gulp.task('html', function() {
+    gulp.src('src/index.html')
         .pipe(gulp.dest('./'));
 });
 
@@ -74,7 +99,7 @@ gulp.task('lint', function() {
       .pipe(eslint.failOnError());
 });
 
-gulp.task('assets', function() {
+gulp.task('assets-dist', function() {
     gulp.src('src/img/**/*.*')
       .pipe(imagemin({
           progressive: true
@@ -82,10 +107,11 @@ gulp.task('assets', function() {
       .pipe(gulp.dest('./img'));
 });
 
-// Generate the icons. This task takes a few seconds to complete.
-// You should run it at least once to create the icons. Then,
-// you should run it whenever RealFaviconGenerator updates its
-// package (see the check-for-favicon-update task below).
+gulp.task('assets', function() {
+    gulp.src('src/img/**/*.*')
+      .pipe(gulp.dest('./img'));
+});
+
 gulp.task('generate-favicon', function(done) {
     realFavicon.generateFavicon({
         masterPicture: 'img/logo.png',
@@ -133,24 +159,19 @@ gulp.task('generate-favicon', function(done) {
     });
 });
 
-// Inject the favicon markups in your HTML pages. You should run
-// this task whenever you modify a page. You can keep this task
-// as is or refactor your existing HTML pipeline.
 gulp.task('inject-favicon-markups', function() {
     gulp.src([ 'src/index.html' ])
 		.pipe(realFavicon.injectFaviconMarkups(JSON.parse(fs.readFileSync(FAVICON_DATA_FILE)).favicon.html_code))
 		.pipe(gulp.dest('./'));
 });
 
-// Check for updates on RealFaviconGenerator (think: Apple has just
-// released a new Touch icon along with the latest version of iOS).
-// Run this task from time to time. Ideally, make it part of your
-// continuous integration system.
+// Include in production task to generate new icons if fails check
+// Also useful in CI
 gulp.task('check-for-favicon-update', function() {
     var currentVersion = JSON.parse(fs.readFileSync(FAVICON_DATA_FILE)).version;
     realFavicon.checkForUpdates(currentVersion, function(err) {
         if (err) {
-            throw err;
+            runSequence('generate-favicon'); //remove when Gulp 4.0 is released
         }
     });
 });
