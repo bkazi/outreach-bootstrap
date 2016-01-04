@@ -43,7 +43,7 @@ gulp.task('critical', function() {
         base: './',
         src: 'index.html',
         dest: 'index.html',
-        pathPrefix: '/',
+        pathPrefix: '../',
         minify: true,
         dimensions: [{
             height: 200,
