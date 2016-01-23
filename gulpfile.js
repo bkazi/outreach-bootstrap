@@ -6,7 +6,7 @@ var sass = require('gulp-sass');
 var autoprefixer = require('gulp-autoprefixer');
 var browserSync = require('browser-sync').create();
 var eslint = require('gulp-eslint');
-var concat = require('gulp-concat');
+// var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
 var imagemin = require('gulp-imagemin');
 var realFavicon = require ('gulp-real-favicon');
@@ -23,13 +23,17 @@ var FAVICON_DATA_FILE = 'faviconData.json';
 gulp.task('default', function() {
     runSequence('styles', 'assets', 'html', 'lint', 'scripts');
     gulp.watch('src/sass/**/*.scss', ['styles']);
-    gulp.watch('src/index.html', ['html']);
+    gulp.watch(['src/index.html', 'src/views/*'], ['html']);
     gulp.watch('src/img/**/*.*', ['assets']);
     gulp.watch('src/js/**/*.js', ['lint', 'scripts']);
     gulp.watch('index.html').on('change', browserSync.reload);
 
     browserSync.init({
-        server: './'
+        server: './',
+        port: 8080,
+        ui: {
+            port: 8081
+        }
     });
 });
 
@@ -110,23 +114,27 @@ gulp.task('html-dist', function() {
         .pipe(realFavicon.injectFaviconMarkups(JSON.parse(fs.readFileSync(FAVICON_DATA_FILE)).favicon.html_code))
         .pipe(htmlmin({collapseWhiteSpace: true}))
         .pipe(gulp.dest('./'));
+    gulp.src('src/views/*')
+        .pipe(gulp.dest('./views/'));
 });
 
 gulp.task('html', function() {
     gulp.src('src/index.html')
         .pipe(gulp.dest('./'));
+    gulp.src('src/views/*')
+        .pipe(gulp.dest('./views/'));
 });
 
 gulp.task('scripts', function() {
-    gulp.src(['src/js/**/*.min.js','src/js/**/*.js'])
-      .pipe(concat('main.js'))
+    gulp.src(['src/js/**/*.js'])
+    //   .pipe(concat('main.js'))
       .pipe(gulp.dest('./js'))
       .pipe(browserSync.stream());
 });
 
 gulp.task('scripts-dist', function() {
-    gulp.src(['src/js/**/*.min.js','src/js/**/*.js'])
-      .pipe(concat('main.js'))
+    gulp.src(['src/js/**/*.js'])
+    //   .pipe(concat('main.js'))
       .pipe(uglify())
       .pipe(gulp.dest('./js'));
 });

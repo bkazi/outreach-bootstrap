@@ -48,27 +48,26 @@ pre {
   }
 }
 
-#main {
-  position: absolute;
+.main {
+  position: relative;
   width: 100%;
   height: 100%;
-  overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
 }
 
-#main.scroll {
+.scroll {
   overflow: hidden;
 }
 
 .navbar {
-  position: fixed;
+  position: relative;
   background: rgb(156, 39, 176);
   width: 100%;
   height: 56px;
   z-index: 10;
   box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),
-              0 3px 1px -2px rgba(0,0,0,.2),
-              0 1px 5px 0 rgba(0,0,0,.12);
+  0 3px 1px -2px rgba(0,0,0,.2),
+  0 1px 5px 0 rgba(0,0,0,.12);
 
   #head {
     font-family: "Helvetica", sans-serif;
@@ -123,8 +122,8 @@ pre {
   overflow-y: auto;
   font-size: 16px;
   box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),
-              0 3px 1px -2px rgba(0,0,0,.2),
-              0 1px 5px 0 rgba(0,0,0,.12);
+  0 3px 1px -2px rgba(0,0,0,.2),
+  0 1px 5px 0 rgba(0,0,0,.12);
 
   .container {
     padding-top: 15px;
@@ -182,13 +181,6 @@ pre {
   transform: rotate(-45deg) translateY(-3.5px) translateX(3.5px) scaleX(0.85);
 }
 
-main {
-  position: absolute;
-  top: 56px;
-  width: 100%;
-  overflow: auto;
-}
-
 .obfuscator {
   transition: background-color 0.2s ease-in;
   width: 100%;
@@ -215,7 +207,7 @@ main {
   position: relative;
   padding: 0 0 0 0;
   width: 100%;
-  height: calc(75vh - 56px);
+  height: calc(100vh - 56px);
   z-index: 0;
   overflow: hidden;
   margin-bottom: 0px;
@@ -248,7 +240,7 @@ main {
 
   h1 {
     font-family: "Patua One", serif;
-    color: rgb(200, 200, 200);
+    color: rgb(230, 230, 230);
     font-size: 2.5em;
     filter: drop-shadow(1px 1px 5px rgb(40, 40, 40));
   }
@@ -257,7 +249,7 @@ main {
     font-weight: 200;
     font-size: 1.2em;
     font-family: 'Open Sans', sans-serif;
-    color: rgb(200, 200, 200);
+    color: rgb(230, 230, 230);
   }
 
   hr {
@@ -269,8 +261,6 @@ main {
 }
 
 .content {
-  // margin-left: 1em;
-  // margin-right: 1em;
   border-bottom: 2px solid rgba(20, 20, 20, 0.15);
   h1 {
     font-size: 2em;
