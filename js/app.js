@@ -1,1 +1,23 @@
-!function(){var e=angular.module("app",["ngRoute"]);e.config(function(e){e.when("/",{templateUrl:"views/htmlInfo.html"}).when("/resources",{templateUrl:"views/resources.html"}).otherwise({redirectTo:"/"})}),e.controller("TabController",["$scope",function(e){e.tab=0,e.isSet=function(t){return e.tab===t},e.setTab=function(t){e.tab=t}}])}();
+(function() {
+    var app = angular.module('app', ['ngRoute', 'ngAnimate', 'hljs']);
+
+    app.config(function($routeProvider, hljsServiceProvider) {
+        $routeProvider
+            .when('/', {
+                templateUrl: 'views/intro.html'
+            })
+            .when('/htmlInfo', {
+                templateUrl: 'views/htmlInfo.html'
+            })
+            .when('/resources', {
+                templateUrl: 'views/resources.html'
+            })
+            .otherwise({
+                redirectTo: '/'
+            });
+        hljsServiceProvider.setOptions({
+            // replace tab with 2 spaces
+            tabReplace: '  '
+        });
+    });
+}) ();

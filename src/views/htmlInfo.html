@@ -1,13 +1,4 @@
 <div class="main">
-	<div class="jumbotron">
-		<div class="back"></div>
-		<div class="container">
-			<h1>Introduction to HTML and CSS</h1>
-			<p>An introductory guide to creating amazing webpages using Bootstrap 3</p>
-			<hr>
-		</div>
-	</div>
-
 <div class="container content" id="intro">
 	<h1>HTML</h1>
 	<hr>
@@ -42,21 +33,19 @@
 		either shown in the top of the browser on the tab for that page.
 	</p>
 	<br><br>
-	<pre>
-		<code>
-&lthtml&gt
-&lthead&gt
-&lttitle&gtThis is the title of the Page&lt/title&gt
-&lt/head&gt
-&ltbody&gt
-&lth1&gtThis is the Body of the Page&lt/h1&gt
-&ltp&gt
-Anything displayed within the body of the web page is displayed within the main browser window.
-&lt/p&gt
-&lt/body&gt
-&lt/html&gt
-		</code>
-	</pre>
+	<div hljs no-escape>
+&lt;html&gt;
+	&lt;head&gt;
+		&lt;title&gt;This is the title of the Page&lt;/title&gt;
+	&lt;/head&gt;
+	&lt;body&gt;
+		&lt;h1&gt;This is the Body of the Page&lt;/h1&gt;
+		&lt;p&gt;
+			Anything displayed within the body of the web page is displayed within the main browser window.
+		&lt;/p&gt;
+	&lt;/body&gt;
+&lt;/html&gt;
+		</div>
 </div>
 
 <div class="container content" id="lists">
@@ -64,28 +53,26 @@ Anything displayed within the body of the web page is displayed within the main 
 	<hr>
 	<p>There are 2 kinds of list in HTML, ordered and unordered lists. See
 	what the code below does to the webpage:</p>
-	<pre>
-		<code>
-&lthtml&gt
-&ltbody&gt
-&ltul&gt
-&ltli&gt1kg King Edward potatoes&lt/li&gt
-&ltli&gt100ml milk&lt/li&gt
-&ltli&gt50g salted butter&lt/li&gt
-&ltli&gtFreshly grated nutmeg&lt/li&gt
-&ltli&gtSalt and pepper to taste&lt/li&gt
-&lt/ul&gt
-&ltol&gt
-&ltli&gtChop potatoes into quarters&lt/li&gt
-&ltli&gtSimmer in salted water for 15-20 minutes until tender&lt/li&gt
-&ltli&gtHeat milk, butter and nutmeg&lt/li&gt
-&ltli&gtDrain potatoes and mash&lt/li&gt
-&ltli&gtMix in the milk mixture&lt/li&gt
-&lt/ol&gt
-&lt/body&gt
-&lt/html&gt
-		</code>
-	</pre>
+	<div hljs no-escape>
+&lt;html&gt;
+	&lt;body&gt;
+		&lt;ul&gt;
+			&lt;li&gt;1kg King Edward potatoes&lt;/li&gt;
+			&lt;li&gt;100ml milk&lt;/li&gt;
+			&lt;li&gt;50g salted butter&lt;/li&gt;
+			&lt;li&gt;Freshly grated nutmeg&lt;/li&gt;
+			&lt;li&gt;Salt and pepper to taste&lt;/li&gt;
+		&lt;/ul&gt;
+		&lt;ol&gt;
+			&lt;li&gt;Chop potatoes into quarters&lt;/li&gt;
+			&lt;li&gt;Simmer in salted water for 15-20 minutes until tender&lt;/li&gt;
+			&lt;li&gt;Heat milk, butter and nutmeg&lt;/li&gt;
+			&lt;li&gt;Drain potatoes and mash&lt;/li&gt;
+			&lt;li&gt;Mix in the milk mixture&lt;/li&gt;
+		&lt;/ol&gt;
+	&lt;/body&gt;
+&lt;/html&gt;
+		</div>
 	<p>
 		<span class="code head">&ltul&gt</span>
 	<br>
@@ -106,11 +93,9 @@ Anything displayed within the body of the web page is displayed within the main 
 <div class="container content" id="links">
 	<h1>Links!</h1>
 	<hr>
-	<pre>
-		<code>
-&lta href="http://www.google.com"&gtGoogle!&lt/a&gt
-		</code>
-	</pre>
+	<div hljs no-escape>
+&lt;a href="http://www.google.com"&gt;Google!&lt;/a&gt;
+	</div>
 	<p>Links are created using the <span class="code">&lta&gt</span> element. Users can click on anything
 		between the opening <span class="code">&lta&gt</span> tag and closing <span class="code">&lt/a&gt</span> tag. You can specify
 		which page you want to link to using the href attribute.</p>
@@ -119,11 +104,9 @@ Anything displayed within the body of the web page is displayed within the main 
 <div class="container content" id="images">
 	<h1>Images</h1>
 	<hr>
-	<pre>
-		<code>
-&ltimg src="img/image.jpg" height="300" width="400" alt="image"&gt
-		</code>
-	</pre>
+	<div hljs no-escape>
+&lt;img src="img/image.jpg" height="300" width="400" alt="image"&gt;
+	</div>
 	<p>
 		<span class="code head">&ltimg&gt</span>
 		<br>
