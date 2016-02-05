@@ -1,0 +1,87 @@
+<div class="main">
+	<div class="container content">
+		<h1>CSS</h1>
+		<p>CSS is used to define styles or rules for your web pages, including the design, layout and variations in display.</p>
+		<h2>How does CSS work?</h2>
+		<p>
+			CSS works by associating rules with HTML elements. these rules govern how the content of specified elements should be displayed, A CSS rule contains two parts: a selector and a declaration.
+			<div hljs no-escape class="custom1">
+p {
+	font-family: Arial;
+}
+			</div>
+			<br>
+			This rule indicates <span class="code">&lt;p&gt;</span> elements should be shown in the Arial typeface.
+			<br><br>
+			<span style="color: rgb(58, 164, 21)">Selectors</span> indicate which element the rule applies to. The same rule can apply to more than one element if you separate the element names with commas.
+			<br><br>
+			<span style="color: rgb(203, 138, 28)">Declarations</span> indicate how the elements referred to in the selector should be styled. Declarations are split into two parts (a property and a value), and are separated by a colon.
+			<br><br>
+			CSS declaration sit inside curly brackets and each is made up of two parts: a <span style="color: rgb(207, 65, 150)">property</span> and a <span style="color: rgb(214, 212, 33)">value</span>, separated by a colon. You can specify several properties in one declaration, each separated by a semi-colon.
+			<br><br>
+			<div hljs no-escape class="custom2">
+h1, h2, h3 {
+  font-family: Arial;
+  color: yellow;
+}
+			</div>
+			<br><br>
+			This rule indicates that all <span class="code">&lt;h1&gt;</span>, <span class="code">&lt;h2&gt;</span> and <span class="code">&lt;h3&gt;</span> elements should be shown in the Arial typeface, in a yellow color.
+			<br><br>
+			<span style="color: rgb(207, 65, 150)">Properties</span> indicate the aspects of the element you want to change. For example, color, font, width, height and border.
+			<br><br>
+			<span style="color: rgb(214, 212, 33)">Values</span> specify the settings you want to use for the chosen properties. For example, if you want to specify a color property then the value is the color you want the text in these elements to be.
+		</p>
+	</div>
+
+	<div class="container content">
+		<h2>Block and Inline Elements</h2>
+		<hr>
+		<p>
+			Your webpage’s content will be split up … CSS is about labeling HTML...
+			<br><br>
+			Block level elements look like they start on a new line. Example s include <span class="code">&lt;h1&gt;</span> - <span class="code">&lt;h6&gt;</span>, <span class="code">&lt;p&gt;</span> and <span class="code">&lt;div&gt;</span> elements
+			<br><br>
+			Inline elements flow within the text and do not start on a new line. Examples include <span class="code">&lt;img&gt;</span> and <span class="code">&lt;span&gt;</span>
+		</p>
+	</div>
+
+	<div class="container content">
+		<h2>Using External CSS files</h2>
+		<hr>
+		<br>
+		<div hljs no-escape>
+&lt;link href="css/styles.css" rel="stylesheet"&gt;
+		</div>
+		<br><br>
+		<p>
+			<span class="code head">&ltlink&gt</span>
+			<br><br>
+			The <span class="code">&ltlink&gt</span> element  can be used in an HTML document to tell the browser where to find the CSS file used to style the page and it lives inside the <span class="code">&lthead&gt</span> element. With an external style sheet, you can change the look of an entire website by changing just one file! External stylesheets are also useful when using frameworks such as Bootstrap as they depend on their own CSS files.
+		</p>
+	</div>
+
+	<div class="container content">
+		<h2>Putting the Cascade in CSS</h2>
+		<hr>
+		<p>
+			If there are two or more rules that apply to the same element, it is important to understand which will take precedence.
+			<br><br>
+			<span class="head">Last Rule</span>
+			<br><br>
+			If the two selectors are identical, the latter of the two will take precedence.
+			<br><br>
+			<span class="head">Specificity</span>
+			<br><br>
+			If one selector is more specific than the others, the more specific rule will take precedence over the other more general ones.
+		</p>
+	</div>
+
+	<div class="container content">
+		<h1>Inheritance</h1>
+		<hr>
+		<p>
+			If you specify the font-family or color properties on the <body> element, they will apply to most child elements. This is because the value of the font-family property is inherited by child elements. It saves you from having to apply these properties to as many elements (and results in simpler stylesheets). You can force a lot of properties to inherit the values from their parent elements by using inherit for the value of the properties.
+		</p>
+	</div>
+</div>

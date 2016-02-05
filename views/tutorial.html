@@ -1,0 +1,135 @@
+<div class="main">
+	<div class="container content">
+    <h2>Creating a Website Using Bootstrap</h2>
+		<p>
+			Now that we’ve established the basics you’ll need we can start using Bootstrap. The advantage with Bootstrap is that most of the work is already done so we don’t have to. The whole range of Bootstrap components make it very easy to make amazing websites with minimal code.
+			<br><br>
+      To get started making your first great website we need to do some initial setup.<br>
+			Firstly you must download the files needed from <a href="http://getbootstrap.com/getting-started/#download">here</a> and extract those files into the folder where you will create the website. You will also need to download the compressed, production jQuery 1.x from <a href="http://jquery.com/download/#jquery-1-x">here</a> and save it in the `js` folder that should be present.
+  		<br><br>
+    		<div hljs no-escape>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+  &lt;head&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+    &lt;title&gt;Page Title&lt;/title&gt;
+    &lt;link rel="stylesheet" href="css/bootstrap.min.css"&gt;
+     &lt;link rel="stylesheet" href="css/styles.css"&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;!-- jQuery (necessary for Bootstrap's JavaScript plugins) --&gt;
+    &lt;script src="js/jquery-1.12.0.min.js"&gt;&lt;/script&gt;
+    &lt;script src="js/bootstrap.min.js"&gt;&lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+    	 </div>
+			 <a class="preview" href="">Preview</a>
+      <br><br>
+      This is the basic HTML code necessary to create a website using Bootstrap. Save this code in a file called index.html. Currently this will only display a blank page with a title “Page Title”.
+    </p>
+    <br><hr><br>
+    <span class="head">Bootstrap Components</span>
+    <p>
+      Bootstrap components are many individual components which are meant to provide useful features with easy to use and reuse code.
+      <br><br>
+      <div style="color: rgb(101, 101, 101)">Note: The content used here is just an example and by no means limits you. Go on, create your own website about anything, a sports team, a movie, you or just something awesome.</div>
+    </p>
+  </div>
+
+  <div class="container content">
+    <h2>Jumbotron</h2>
+    <hr>
+    <p>
+      Next we will add a Jumbotron which contains the key or hero element of the page. This is usually the piece that attracts the viewers and engages them in your website. Usually at the top of the page, being the first thing that is seen which gives an overview of your entire website.
+      <br><br>
+      Add the following code after the script tags in the body in index.html.
+      <div hljs no-escape>
+&lt;div class="jumbotron text-center"&gt;
+  &lt;img src="img/Galactic_Republic.svg" height="150px" width="150px"&gt;
+  &lt;h1&gt;Galactic Republic&lt;/h1&gt;
+&lt;/div&gt;
+      </div>
+      <a class="preview" href="">Preview</a>
+      <br><br>
+      The <span class="code">&lt;div&gt;</span> tags are generally used to section the HTML code within it and format them with CSS. The class attribute in the element is important as it leads to the CSS class and the CSS styling rules to be used. The “jumbotron” class is a Bootstrap class, we will be adding our own custom styles to it soon. The class “text-center” is a convenient Bootstrap class which can be used to center most elements.
+      <br><br>
+      <div hljs>
+.jumbotron {
+  background-image: url('../img/jumboback.jpg');
+  background-attachment: fixed;
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+}
+
+.jumbotron h1 {
+  font-family: 'Star Jedi';
+  font-size: 72px;
+  color: #EEEEEE;
+}
+
+.jumbotron img {
+  margin: 24px;
+}
+      </div>
+      <a class="preview" href="">Preview</a>
+      <br><br>
+      Looking at the jumbotron rules first. The background-image property sets the background of the jumbotron to an image jumboback.jpg located in the folder img. The fixed attachment says that the background will appear to not move as you scroll. The width is set to 100% so that it takes up all the width of it’s parent element, the height is 100vh, which means it takes up 100% of the height of the browser window. While cover says that the image will be stretched to fit this space.
+      <br><br>
+      The ‘jumbotron h1’ rule is specific only to h1 tag in the divs containing the class jumbotron. Here font-family sets the font to “Star Jedi” font (see <a href="https://www.google.com/fonts">Google Fonts</a> for a good font library and how to use them) and the font-size sets it to 72 pixel size while color sets the color to a shade of white in hexadecimal code (see <a href="http://www.colorpicker.com/">colorpicker</a> for picking colors and getting their hexadecimal code).
+      <br><br>
+      The ‘jumbotron img’ rule defines a margin of 24 pixels around the image to keep some spacing between it and the other elements. A good reference for understanding the way margins, borders, and padding work in CSS would be to have a look at <a href="http://www.w3schools.com/css/css_boxmodel.asp">box-model</a> at W3Schools.
+      <br><br>
+    </p>
+  </div>
+
+  <div class="container content">
+    <h2>Adding Content</h2>
+    <hr>
+    <p>
+      <br>
+      <div hljs no-escape>
+&lt;div class="container content"&gt;
+  &lt;h2&gt;Who are the Republic?&lt;/h3&gt;
+  &lt;img src="img/Flag.png" class="col-md-4"&gt;
+  &lt;div class="col-md-8"&gt;
+    &lt;p&gt;
+    The Galactic Republic is the name of the interplanetary State used in the fictional Star Wars universe prior to the establishment...
+    &lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+      </div>
+      <a class="preview" href="">Preview</a>
+      <br><br>
+      Here we have added a new container class to the outer div. The container class is a Bootstrap component which just contains content and provides some basic spacing and attributes.
+      <br><br>
+      The real magic in positioning comes from using Bootstrap’s grid. The Bootstrap grid has 12 columns. We can control how many columns content takes up by using the “col-md-n” class, where n is the number of columns. One thing we must take care of is to make sure the columns our content use are equal to or less than 12. “col-md-4” means that the content will take up 4 of the columns available to it on a medium sized screen and larger. We can also use lg, s, or xs for different screen sizes instead of md but md works best for most computer screens.
+      <br><br>
+      <div hljs>
+.content {
+  padding-bottom: 20px;
+  padding-top: 15px;
+  font-size: 20px;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+}
+
+.content h2 {
+  padding: 10px;
+  font-family: 'Droid Serif';
+  font-size: 36px;
+}
+
+.content p {
+  font-family: 'Source Sans Pro';
+}
+      </div>
+      <a class="preview" href="">Preview</a>
+      <br><br>
+      In the rules for content we specify some padding on the top and bottom of it and a solid border at the bottom of 2 pixel width with a color which has 0 red, 0 green, 0 blue, and 0.2 opacity. (rgba takes values of red, green, and blue within the range of 0 - 255 and the final value of opacity from 0 - 1).
+      <br><br>
+      In ‘content h2’ we define a padding of 10px on all sides of the element by using padding: 10px.
+    </p>
+  </div>
+</div>
