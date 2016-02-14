@@ -22,7 +22,7 @@ var FAVICON_DATA_FILE = 'faviconData.json';
 gulp.task('default', function() {
     runSequence('styles', 'assets', 'html', 'lint', 'scripts');
     gulp.watch('src/sass/**/*.scss', ['styles']);
-    gulp.watch(['src/index.html', 'src/views/*'], ['html']);
+    gulp.watch(['src/index.html', 'src/views/*', 'src/previews/*'], ['html']);
     gulp.watch('src/img/**/*.*', ['assets']);
     gulp.watch('src/js/**/*.js', ['lint', 'scripts']);
     gulp.watch('index.html').on('change', browserSync.reload);
@@ -117,6 +117,8 @@ gulp.task('html', function() {
         .pipe(gulp.dest('./'));
     gulp.src('src/views/*')
         .pipe(gulp.dest('./views/'));
+    gulp.src('src/previews/*')
+        .pipe(gulp.dest('./previews/'));
 });
 
 gulp.task('scripts', function() {
