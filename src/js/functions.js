@@ -7,10 +7,10 @@ $(document).ready(function(){
         $('#mid').toggleClass('show');
         $('#bot').toggleClass('show');
         $('#obfus').toggleClass('show');
-        $('#main').toggleClass('scroll');
+        $('body').toggleClass('scroll');
     });
 
-    $('h3.toggler').click(function() {
-        $(this).next().slideToggle(400);
-    });
+    // $('h3.toggler').click(function() {
+    //     $(this).next().slideToggle(400);
+    // });
 });

@@ -1,0 +1,128 @@
+<div class="main">
+<div class="container content" id="intro">
+	<h1>HTML</h1>
+	<hr>
+	<p>HTML is made up of HTML elements, which live inside angled brackets.
+		These are usually made up of two tags: an opening and a closing tag (which
+		has an extra forward slash in it). Each HTML element tells the browser
+		something about the text that sits between those opening and closing tags.
+		<br><br>
+		Sometimes the opening tag of the element contains more information, in
+		something called an attribute. These are made up of two parts: a name and
+		a value, separated by an equals sign.</p>
+</div>
+
+<div class="container content" id="struc">
+	<h1>Structure of a Website</h1>
+	<hr>
+	<p>
+		<span class="code head">&ltbody&gt</span>
+	<br>
+		Everything inside this element is shown inside the main browser window.
+	<br><br>
+		<span class="code head">&lthead&gt</span>
+	<br>
+		Before the <span class="code">&ltbody&gt</span> element you will often
+		see a <span class="code">&lthead&gt</span> element. This contains
+		information about the page (rather than information that is shown
+		within the main part of the browser window.
+	<br><br>
+		<span class="code head">&lttitle&gt</span>
+	<br>
+		The contents of the <span class="code">&lttitle&gt</span> element are
+		either shown in the top of the browser on the tab for that page.
+	</p>
+	<br><br>
+	<div hljs no-escape>
+&lt;html&gt;
+	&lt;head&gt;
+		&lt;title&gt;This is the title of the Page&lt;/title&gt;
+	&lt;/head&gt;
+	&lt;body&gt;
+		&lt;h1&gt;This is the Body of the Page&lt;/h1&gt;
+		&lt;p&gt;
+			Anything displayed within the body of the web page is displayed within the main browser window.
+		&lt;/p&gt;
+	&lt;/body&gt;
+&lt;/html&gt;
+		</div>
+</div>
+
+<div class="container content" id="lists">
+	<h1>Lists .. Lists .. Lists</h1>
+	<hr>
+	<p>There are 2 kinds of list in HTML, ordered and unordered lists. See
+	what the code below does to the webpage:</p>
+	<div hljs no-escape>
+&lt;html&gt;
+	&lt;body&gt;
+		&lt;ul&gt;
+			&lt;li&gt;1kg King Edward potatoes&lt;/li&gt;
+			&lt;li&gt;100ml milk&lt;/li&gt;
+			&lt;li&gt;50g salted butter&lt;/li&gt;
+			&lt;li&gt;Freshly grated nutmeg&lt;/li&gt;
+			&lt;li&gt;Salt and pepper to taste&lt;/li&gt;
+		&lt;/ul&gt;
+		&lt;ol&gt;
+			&lt;li&gt;Chop potatoes into quarters&lt;/li&gt;
+			&lt;li&gt;Simmer in salted water for 15-20 minutes until tender&lt;/li&gt;
+			&lt;li&gt;Heat milk, butter and nutmeg&lt;/li&gt;
+			&lt;li&gt;Drain potatoes and mash&lt;/li&gt;
+			&lt;li&gt;Mix in the milk mixture&lt;/li&gt;
+		&lt;/ol&gt;
+	&lt;/body&gt;
+&lt;/html&gt;
+		</div>
+	<p>
+		<span class="code head">&ltul&gt</span>
+	<br>
+		The unordered list is created with the <span class="code">&ltul&gt</span> element
+	<br><br>
+		<span class="code head">&ltol&gt</span>
+	<br>
+		The ordered list is created with the <span class="code">&ltol&gt</span> element
+	<br><br>
+		<span class="code head">&ltli&gt</span>
+	<br>
+	Each item in the list is placed between an opening <span class="code">&ltli&gt</span> tag and a closing
+	<span class="code">&lt/li&gt</span> tag. Browsers indent lists by default
+	</p>
+	<br><br>
+</div>
+
+<div class="container content" id="links">
+	<h1>Links!</h1>
+	<hr>
+	<div hljs no-escape>
+&lt;a href="http://www.google.com"&gt;Google!&lt;/a&gt;
+	</div>
+	<p>Links are created using the <span class="code">&lta&gt</span> element. Users can click on anything
+		between the opening <span class="code">&lta&gt</span> tag and closing <span class="code">&lt/a&gt</span> tag. You can specify
+		which page you want to link to using the href attribute.</p>
+</div>
+
+<div class="container content" id="images">
+	<h1>Images</h1>
+	<hr>
+	<div hljs no-escape>
+&lt;img src="img/image.jpg" height="300" width="400" alt="image"&gt;
+	</div>
+	<p>
+		<span class="code head">&ltimg&gt</span>
+		<br>
+		To add an image into the page you need to use an
+		<span class="code">&ltimg&gt</span> element. This is an empty element
+		(which means there is no closing tag).
+	</p>
+	<h3>Attributes:</h3>
+	<p>
+		src - This tells the browser where it can find the image file<br>
+		height - This specifies the height of the image in pixels<br>
+		width - This specifies the width of the image in pixels<br>
+	</p>
+</div>
+
+<div class="card card-next">
+	<a href="/cssInfo">CSS  <i class="fa fa-chevron-right"></i></a>
+</div>
+</div>
