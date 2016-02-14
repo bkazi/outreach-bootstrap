@@ -1,7 +1,7 @@
 (function() {
     var app = angular.module('app', ['ngRoute', 'ngAnimate', 'hljs']);
 
-    app.config(function($routeProvider, hljsServiceProvider, $locationProvider) {
+    app.config(function($routeProvider, hljsServiceProvider) {
         $routeProvider
             .when('#/', {
                 templateUrl: 'views/intro.html'
@@ -19,12 +19,12 @@
                 templateUrl: 'views/resources.html'
             })
             .otherwise({
-                redirectTo: ''
+                redirectTo: '#/'
             });
         hljsServiceProvider.setOptions({
             // replace tab with 2 spaces
             tabReplace: '  '
         });
-        $locationProvider.html5Mode(true);
+        // $locationProvider.html5Mode(true);
     });
 }) ();
