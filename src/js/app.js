@@ -3,19 +3,19 @@
 
     app.config(function($routeProvider, hljsServiceProvider, $locationProvider) {
         $routeProvider
-            .when('', {
+            .when('.', {
                 templateUrl: 'views/intro.html'
             })
-            .when('htmlInfo', {
+            .when('./htmlInfo', {
                 templateUrl: 'views/htmlInfo.html'
             })
-            .when('cssInfo', {
+            .when('./cssInfo', {
                 templateUrl: 'views/cssInfo.html'
             })
-            .when('tutorial', {
+            .when('./tutorial', {
                 templateUrl: 'views/tutorial.html'
             })
-            .when('resources', {
+            .when('./resources', {
                 templateUrl: 'views/resources.html'
             })
             .otherwise({
