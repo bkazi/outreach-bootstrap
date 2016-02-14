@@ -11,7 +11,6 @@ var uglify = require('gulp-uglify');
 var imagemin = require('gulp-imagemin');
 var realFavicon = require ('gulp-real-favicon');
 var fs = require('fs');
-var ghPages = require('gulp-gh-pages');
 var htmlmin = require('gulp-htmlmin');
 var runSequence = require('run-sequence');
 var critical = require('critical');
@@ -81,11 +80,6 @@ gulp.task('dist', function() {
                 'styles-dist',
                 'html-dist',
                 'scripts-dist');
-});
-
-gulp.task('deploy', function() {
-    return gulp.src('./**/*')
-        .pipe(ghPages());
 });
 
 gulp.task('styles-dist', function() {
