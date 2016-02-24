@@ -326,19 +326,19 @@ code {
 
 .card {
   display: inline-block;
+  position: relative;
   width: 100%;
   max-width: 420px;
   height: 320px;
   background-color: #FFF;
   border-radius: 2px;
-  overflow: hidden;
   margin-top: 1em;
   margin-bottom: 1.2em;
   margin-left: 0.5em;
   margin-right: 0.5em;
   padding: 1.2em;
-  text-align: center;
-  transition: box-shadow 0.2s ease-in-out; }
+  padding-bottom: 0px;
+  text-align: center; }
   @media screen and (min-width: 660px) {
     .card {
       width: calc(50% - 1em); } }
@@ -348,8 +348,23 @@ code {
   .card i {
     font-size: 3em;
     color: #54527d; }
-  @media screen and (max-width: 680px) {
-    .card:hover {
+
+.get-started {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 3.5em;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+  padding: 1em;
+  font-size: 1.2rem;
+  background-color: rgba(100, 100, 100, 0.05);
+  transition: box-shadow 0.2s ease-in-out; }
+  @media screen and (min-width: 680px) {
+    .get-started:hover {
       box-shadow: 0px 0px 3px 2px rgba(0, 0, 0, 0.35); } }
 
 .card-next {
