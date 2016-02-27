@@ -379,13 +379,13 @@ code {
     font-size: 1em; }
 
 .custom1 .css {
-  color: #3aa415; }
-
-.custom1 .hljs-selector-tag {
   color: #cb8a1c; }
 
-.custom1 .hljs-attribute {
+.custom1 .hljs-selector-tag {
   color: #3aa415; }
+
+.custom1 .hljs-attribute {
+  color: #cb8a1c; }
 
 .custom2 .css {
   color: #d6d421; }

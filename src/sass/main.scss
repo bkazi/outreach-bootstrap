@@ -415,13 +415,13 @@ code {
 
 .custom1 {
   .css{
-    color: rgb(58, 164, 21);
-  }
-  .hljs-selector-tag {
     color: rgb(203, 138, 28);
   }
-  .hljs-attribute {
+  .hljs-selector-tag {
     color: rgb(58, 164, 21);
+  }
+  .hljs-attribute {
+    color: rgb(203, 138, 28);
   }
 }
 
